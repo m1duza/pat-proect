@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 
 
 export default function Playlistwrapper() {
-    const playlistData = usePlaylistData('/pat-proect/rapPlaylist.json'); // Данные из rockPlaylist.json
+    const playlistData = usePlaylistData('/pat-proect/rockPlaylist.json'); // Данные из rockPlaylist.json
   const {
     myMusic,
     currentTrack,
