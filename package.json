@@ -9,14 +9,8 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-<<<<<<< HEAD
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
-=======
-  "predeploy": "npm run build",
-     "deploy": "gh-pages -d dist"
-    
->>>>>>> 6ba3dde (Resolve merge conflicts)
   },
 
 
