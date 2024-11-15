@@ -4,7 +4,7 @@ import usePlaylistData from './usePlaylistData';
 import useStore from './useStore';
 
 export default function PlayList2() {
-  const playlistData = usePlaylistData('/rapPlaylist.json');
+  const playlistData = usePlaylistData('/pat-proect/rapPlaylist.json');
 
 
 
