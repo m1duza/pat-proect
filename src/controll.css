@@ -1,0 +1,156 @@
+.controll-panel{
+
+    width: 100%;
+    height: 100px;
+background-color: #222222;
+-webkit-box-shadow: 0px -10px 8px 0px rgba(0, 0, 0, 0.05);
+-moz-box-shadow: 0px -10px 8px 0px rgba(0, 0, 0, 0.05);
+box-shadow: 0px -10px 8px 0px rgba(0, 0, 0, 0.05);
+display: flex;
+
+flex-direction: row ;
+align-items: center;
+
+
+}
+.title2{
+    color:#F4B886;
+    font-size: 15px;
+}
+.author2{
+    font-size: 14px;
+
+    color: #545454;
+}
+.cover__img2{
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+  margin-left: 5px;
+    
+}
+.info__block{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+.main__info__block{
+    display: flex;
+
+}
+.button{
+    width: 50px;
+    height: 25px;
+}
+.main__controll__block{
+    display: flex;
+    flex-direction: column;
+    margin-left: 500px;
+    width: 900px;
+}
+.main__block{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.main__block2{
+    margin-left: 10px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+}
+.main__author__time{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.current__time{
+    height: 15px;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+.cicle3{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    
+}
+.toggle__button{
+
+    height: 24px;
+margin-left: 1px;
+cursor: pointer;
+width: 35px;
+height: 35px;
+border-radius: 50%;
+background-color: white;
+display: flex;
+align-items: center;
+justify-content: center;
+
+
+}
+button{
+    border: none; /* Убираем бордер */
+    outline: none; /* Убираем обводку, которая появляется при фокусе */
+    background: none; /* Убираем фон, если не нужен */
+}
+.prev__icon{
+    rotate: 180deg;
+    height: 30px;
+    cursor: pointer;
+}
+.centrall__controll__block{
+    width: 170px;
+    
+    display: flex;
+    gap: 30px;
+    align-items: center;
+
+
+}
+.next__icon{
+    cursor: pointer;
+}
+.mute__button{
+    cursor: pointer;
+}
+.img_pouse{
+    width: 24px;
+    height: 24px;
+}
+/* Убедитесь, что у .volume_percentage задано абсолютное позиционирование */
+.volume__block{
+    display: flex;
+  align-items: center;
+
+}
+.left_side__main__block{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.volume_slider{
+    width: 100%;
+    cursor: pointer;
+}
+
+.time_slider{
+    width: 100%;
+    cursor: pointer;
+}
+  .main_side_major_left_block{
+    display: flex;
+    
+  }

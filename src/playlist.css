@@ -1,0 +1,208 @@
+.main_block_play_list{
+    height: 765px;
+    width: 800px;
+    background-color: hsl(0, 0%, 13%);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+
+}
+.playlist_wrapper{
+    width: 160px;
+margin-top: 10px;
+border-radius: 20px;
+cursor: pointer;
+}
+.container_for_playlist{
+    width: 175px;
+    height: 220px;
+    background-color: #343434;
+    border-radius: 20px;
+    display: flex;
+
+    justify-content: center;
+    margin-left: 10px;
+    margin-top: 15px;
+    -webkit-box-shadow: -4px 4px 8px 0px rgba(20, 20, 20, 0.2);
+    -moz-box-shadow: -4px 4px 8px 0px rgba(20, 20, 20, 0.2);
+    box-shadow: -4px 4px 8px 0px rgba(20, 20, 20, 0.2);
+}
+.wrapper_for_button{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.wrapper_button{
+    
+    height: 20px;
+    padding: 5px;
+    border-radius: 10px;
+}
+.wrapper_button_long{
+    width: 150px;
+    height: 20px;
+    background-color: #F4B886;
+    border-radius: 10px;
+}
+.black_background{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main_playlist_wrapper{
+    width: 550px;
+    height: 700px;
+    background-color: #292929;
+    z-index: 100;
+    position: relative;
+    border-radius: 20px;
+ 
+}
+.main_playlist_title{
+    color: #F4B886;
+    font-weight: 600;
+    font-size: 12px;
+    width: 100px;
+}
+.main_playlist_author{
+    color: #545454;
+    font-size: 14px;
+    font-weight: 800;
+    width: auto;
+
+}
+.main_playlist_author:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.pop_up{
+    position: absolute;
+
+}
+.pop_up_icon{
+    position: absolute;
+    left: 65px;
+    bottom: 70px;
+    cursor: pointer;
+}
+.play_button.active {
+    background-color: #444444; /* Активный цвет фона для текущего трека */
+    filter: brightness(90%);
+  }
+  
+  .play_button.inactive {
+    background-color: #222222; /* Обычный цвет фона для остальных треков */
+  }
+  .main_audio_files_block2{
+
+  }
+  .play_button2{
+    width: 520px;
+    height: 50px;
+    border-radius: 15px;
+    outline: none;
+    border: 0;
+    display: flex;
+    margin-bottom: 5px;
+    background-color:#222222;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    justify-content: space-between;
+  }
+  .main_left_side_block{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .main_playlist_block{
+    display: flex;
+    flex-direction: row;
+  }
+  .wrapper_button{
+    font-size: 16px;
+    font-weight: bold;
+    color:     #fff;
+    -webkit-box-shadow: -4px 4px 8px 0px rgba(20, 20, 20, 0.2);
+    -moz-box-shadow: -4px 4px 8px 0px rgba(20, 20, 20, 0.2);
+    box-shadow: -4px 4px 8px 0px rgba(20, 20, 20, 0.2);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  .wrapper_button:hover{
+    font-size: 16px;
+    font-weight: bold;
+    color:     #222222;
+    background-color: #F4B886;
+    -webkit-box-shadow: -4px 4px 8px 0px rgba(232, 168, 124, 0.2);
+    -moz-box-shadow: -4px 4px 8px 0px rgba(232, 168, 124, 0.2);
+    box-shadow: -4px 4px 8px 0px rgba(232, 168, 124, 0.2);
+  }
+  .nav_button{
+    display: flex;
+    gap: 25px;
+  }
+  .wrapper_button.active{
+    font-size: 16px;
+    font-weight: bold;
+    color:     #222222;
+    background-color: #F4B886;
+    -webkit-box-shadow: -4px 4px 8px 0px rgba(232, 168, 124, 0.2);
+    -moz-box-shadow: -4px 4px 8px 0px rgba(232, 168, 124, 0.2);
+    box-shadow: -4px 4px 8px 0px rgba(232, 168, 124, 0.2);
+  }
+  .upper_block{
+    width: 550px;
+    height: 185px;
+    background-color: #f0596a;
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    align-items: center;
+  }
+  .bottom_audio_files_block{
+ 
+    height: 100%;
+    -webkit-box-shadow: 0px -17px 10px -4px rgba(20, 20, 20, 0.2);
+    -moz-box-shadow: 0px -17px 10px -4px rgba(20, 20, 20, 0.2);
+    box-shadow: 0px -17px 10px -4px rgba(20, 20, 20, 0.2);
+z-index: 100;
+margin-left: 15px;
+margin-right: 15px;
+  }
+  .playlist_wrapper5{
+    
+    height: 160px;
+    width: 160px;
+ 
+    margin-left: 20px;
+    border-radius: 20px;
+  }
+  .lesten_button{
+    height: 40px;
+    width: 150px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-top: 100px;
+    margin-left: 20px;
+  }
+  .upper_block2{
+    width: 550px;
+    height: 185px;
+    background-color: #545454;
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    align-items: center;
+  }
