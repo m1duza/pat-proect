@@ -3,13 +3,13 @@
       "title": "Биг Сити Лайф",
       "author": "Whole Lotta Swag",
       "src": "/pat-proect/audio/Whole Lotta Swag - Биг Сити Лайф [audiovk.com].mp3",
-      "cover": "/cover/S600xU.webp"
+      "cover": "/pat-proect/cover/S600xU.webp"
     },
     {
       "title": "Jefe",
       "author": "Kizaru",
       "src": "/pat-proect/audio/kizaru - Jefe [audiovk.com].mp3",
-      "cover": "/cover/S600xU.webp"
+      "cover": "pat-proect/cover/S600xU.webp"
     }
 
   ]
