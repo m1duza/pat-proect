@@ -62,7 +62,7 @@ return(
             <div className="main_playlist">
                 <img
                 className="playlist_wrapper"
-                src="public\ab67706c0000bebb076341fe5ff3861ac6a37f5d.jfif"
+                src="dist\rockcover 1.png"
                 alt="Playlist cover"
                 style={{
                     filter: togglePlayList ? 'brightness(50%)' : 'brightness(100%)'
