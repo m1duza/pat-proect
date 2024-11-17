@@ -57,7 +57,7 @@ h1{
     align-items: center;
     justify-content: center;
     position: absolute;
-    margin-left:13px;
+    margin-left:10px;
 
 }
 .icon__play{
@@ -74,7 +74,7 @@ h1{
     align-items: center;
     justify-content: center;
     position: absolute;
-    margin-left: 13px;
+    margin-left: 10px;
 
 }
 .icon__play2{
@@ -82,10 +82,7 @@ h1{
     height: 15px;
     
 }
-.container {
 
-  
-}
 
 p{
     font-family: "Noto Sans JP", sans-serif;

@@ -10,6 +10,8 @@ display: flex;
 
 flex-direction: row ;
 align-items: center;
+justify-content: center;
+position: relative; 
 
 
 }
@@ -45,7 +47,7 @@ align-items: center;
 .main__controll__block{
     display: flex;
     flex-direction: column;
-    margin-left: 500px;
+
     width: 900px;
 }
 .main__block{
@@ -112,15 +114,14 @@ button{
 }
 .centrall__controll__block{
  
-    position: absolute;
+    
    
-    left: 0;
-margin-left: 875px;
+
     display: flex;
     gap: 30px;
     align-items: center;
-
-
+  position: absolute;
+margin-left: 370px;
 }
 
 .next__icon{
