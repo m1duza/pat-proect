@@ -111,14 +111,18 @@ button{
     cursor: pointer;
 }
 .centrall__controll__block{
-    width: 170px;
-    
+ 
+    position: absolute;
+   
+    left: 0;
+margin-left: 875px;
     display: flex;
     gap: 30px;
     align-items: center;
 
 
 }
+
 .next__icon{
     cursor: pointer;
 }
@@ -153,4 +157,106 @@ button{
   .main_side_major_left_block{
     display: flex;
     
+  }
+  .placeholder{
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    background-color: #444444;
+  }
+  /* Основные стили слайдера */
+.time_slider {
+    -webkit-appearance: none; /* Убираем стандартный стиль */
+    width: 100%; /* Задаем ширину */
+    height: 8px; /* Высота трека */
+    background: #fff; /* Цвет трека */
+    outline: none; /* Убираем рамку */
+    border-radius: 4px; /* Скругление трека */
+    transition: background 0.3s; /* Анимация при изменении */
+
+  }
+  
+  .time_slider:hover {
+    background: #ccc; /* Цвет трека при наведении */
+  }
+  
+  /* Трек */
+  .time_slider::-webkit-slider-runnable-track {
+    height: 8px;
+    background: #fff;
+    border-radius: 4px;
+  }
+  
+  .time_slider::-moz-range-track {
+    height: 8px;
+    background: #F4B886;
+    border-radius: 4px;
+  }
+  
+  .time_slider::-ms-track {
+    height: 8px;
+    background: #F4B886;
+    border-radius: 4px;
+    border: none;
+  }
+  
+  /* Бегунок (thumb) */
+  .time_slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Убираем стандартный стиль */
+    width: 20px; /* Ширина бегунка */
+    height: 20px; /* Высота бегунка */
+    background: #F4B886; /* Цвет бегунка */
+    border: 2px solid #F4B886; /* Обводка */
+    border-radius: 50%; /* Круглый бегунок */
+    cursor: pointer; /* Указатель */
+    transition: transform 0.3s ease; /* Анимация */
+    margin-top: -6px; /* Сдвигаем вверх на половину разницы высоты */
+
+  }
+  
+  .time_slider::-webkit-slider-thumb:hover {
+    transform: scale(1.2); /* Увеличение при наведении */
+  }
+  
+  .time_slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #F4B886;
+    border: 2px solid #F4B886;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .time_slider::-ms-thumb {
+    width: 20px;
+    height: 20px;
+    background: #F4B886;
+    border: 2px solid #F4B886;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .time_slider::-moz-range-progress {
+    background: #F4B886; /* Прогресс в Firefox */
+    height: 8px;
+  }
+  .volume_slider{
+    -webkit-appearance: none; /* Убираем стандартный стиль */
+    width: 100%; /* Задаем ширину */
+    height: 8px; /* Высота трека */
+    outline: none; /* Убираем рамку */
+    border-radius: 4px; /* Скругление трека */
+  }
+  .volume_slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Убираем стандартный стиль */
+    width: 20px; /* Ширина бегунка */
+    height: 20px; /* Высота бегунка */
+    background: #F4B886; /* Цвет бегунка */
+    border: 2px solid #F4B886; /* Обводка */
+    border-radius: 50%; /* Круглый бегунок */
+    cursor: pointer; /* Указатель */
+    transition: transform 0.3s ease; /* Анимация */
+
+  }
+  .volume_slider::-webkit-slider-thumb:hover {
+    transform: scale(1.2); /* Увеличение при наведении */
   }

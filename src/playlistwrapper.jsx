@@ -18,6 +18,7 @@ export default function Playlistwrapper() {
     setPlaylist,
     addToMyMusic,
     removeFromMyMusic,
+    
   } = useStore();
   const [togglePlayList, setTogglePlayList] = useState(false);
   const [toggleOpenPlayList, setToggleOpenPlayList] = useState(false);
@@ -44,6 +45,9 @@ export default function Playlistwrapper() {
     } else {
       playTrack({ ...file, index });
     }
+    // Пример использования для установки активного плейлиста
+
+
   };
 
   const isTrackInMyMusic = (track) => myMusic.some((t) => t.src === track.src);
@@ -85,7 +89,7 @@ return(
                     <div className="upper_block2">
                       <img
                         className="playlist_wrapper5"
-                        src="ab67706c0000bebb076341fe5ff3861ac6a37f5d.jfif"
+                        src="/pat-proect/rockcover2 1.png"
                         alt="Playlist cover"
                       />
                   

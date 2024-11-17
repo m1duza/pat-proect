@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react';
-import useStore from './useStore';
-import './controll.css';
+import React, { useState, useEffect, useRef } from "react";
+import useStore from "./useStore";
+import "./controll.css";
 
 const Controll = () => {
   const {
@@ -14,20 +14,12 @@ const Controll = () => {
     currentTime,
     setCurrentTime,
     duration,
-
-    
   } = useStore();
-
+  const [sliderValue, setSliderValue] = useState(0); // Процент заполнения
   const [volume, setLocalVolume] = useState(1);
   const timeSliderRef = useRef(null);
 
 
-
-  useEffect(() => {
-    if (timeSliderRef.current) {
-      timeSliderRef.current.value = currentTime;
-    }
-  }, [currentTime]);
 
   const handleVolumeChange = (e) => {
     const newVolume = parseFloat(e.target.value);
@@ -38,6 +30,7 @@ const Controll = () => {
   const handleSliderChange = (event) => {
     const newTime = parseFloat(event.target.value);
     setCurrentTime(newTime);
+ 
   };
 
   return (
@@ -45,24 +38,31 @@ const Controll = () => {
       <div className="main__controll__block">
         <div className="left_side__main__block">
           <div className="main_side_major_left_block">
-       
-            <img
-              className="cover__img2"
-              src={currentTrack ? currentTrack.cover : "placeholder-cover.png"} 
-              alt="Обложка"
-            />
+            {currentTrack ? (
+              <img
+                className="cover__img2"
+                src={currentTrack.cover}
+                alt="Обложка"
+              />
+            ) : (
+              <div className="placeholder"></div>
+            )}
             <div className="main__block2">
               <h2 className="title2">
-                {currentTrack ? currentTrack.title : "Название трека"} 
+                {currentTrack ? currentTrack.title : "Название трека"}
               </h2>
               <h3 className="author2">
-                {currentTrack ? currentTrack.author : "Автор трека"} 
+                {currentTrack ? currentTrack.author : "Автор трека"}
               </h3>
             </div>
           </div>
 
           <div className="centrall__controll__block">
-            <button className="prev__icon" onClick={prevTrack} disabled={!currentTrack}>
+            <button
+              className="prev__icon"
+              onClick={prevTrack}
+              disabled={!currentTrack}
+            >
               <img src="icons8-next-30.png" alt="Prev" />
             </button>
             <button
@@ -75,7 +75,11 @@ const Controll = () => {
                 className="img_pouse"
               />
             </button>
-            <button className="next__icon" onClick={nextTrack} disabled={!currentTrack}>
+            <button
+              className="next__icon"
+              onClick={nextTrack}
+              disabled={!currentTrack}
+            >
               <img src="icons8-next-30.png" alt="Next" />
             </button>
           </div>
@@ -102,10 +106,13 @@ const Controll = () => {
             min="0"
             max={duration || 100}
             step="0.1"
-            value={currentTrack ? currentTime : 0}
+            value={currentTime || 0}
             onChange={handleSliderChange}
             className="time_slider"
             disabled={!currentTrack}
+            style={{
+              background: `linear-gradient(to right, #007bff ${sliderValue}%, #ddd ${sliderValue}%)`,
+            }}
           />
           <span className="time-display">
             {currentTrack

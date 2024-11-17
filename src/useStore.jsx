@@ -1,17 +1,21 @@
-import { create } from 'zustand';
-
+import { create } from "zustand";
 const useStore = create((set, get) => {
   const audio = new Audio();
 
-  const initialMyMusic = JSON.parse(localStorage.getItem('myMusic')) || [];
-  const initialPlaylists = JSON.parse(localStorage.getItem('playlists')) || [];
+  const initialMyMusic = JSON.parse(localStorage.getItem("myMusic")) || [];
+  const initialPlaylists = JSON.parse(localStorage.getItem("playlists")) || [];
 
-  audio.addEventListener('loadedmetadata', () => {
+  audio.addEventListener("loadedmetadata", () => {
     set({ duration: audio.duration });
   });
 
-  audio.addEventListener('timeupdate', () => {
+  audio.addEventListener("timeupdate", () => {
     set({ currentTime: audio.currentTime });
+  });
+
+
+  audio.addEventListener("ended", () => {
+    get().nextTrack(); 
   });
 
   return {
@@ -21,8 +25,7 @@ const useStore = create((set, get) => {
     isPlaying: false,
     duration: 0,
     currentTime: 0,
-    shouldPreventPlay: false, // Флаг для блокировки воспроизведения
-    
+    shouldPreventPlay: false,
 
     enableAutoPlay: () => set({ autoPlayEnabled: true }),
     disableAutoPlay: () => set({ autoPlayEnabled: false }),
@@ -35,7 +38,7 @@ const useStore = create((set, get) => {
       if (!isAlreadyAdded) {
         const updatedMyMusic = [...myMusic, track];
         set({ myMusic: updatedMyMusic });
-        localStorage.setItem('myMusic', JSON.stringify(updatedMyMusic));
+        localStorage.setItem("myMusic", JSON.stringify(updatedMyMusic));
       }
 
       setTimeout(() => set({ shouldPreventPlay: false }), 0);
@@ -46,7 +49,7 @@ const useStore = create((set, get) => {
 
       const updatedMyMusic = get().myMusic.filter((t) => t.src !== track.src);
       set({ myMusic: updatedMyMusic });
-      localStorage.setItem('myMusic', JSON.stringify(updatedMyMusic));
+      localStorage.setItem("myMusic", JSON.stringify(updatedMyMusic));
 
       setTimeout(() => set({ shouldPreventPlay: false }), 0);
     },
@@ -99,27 +102,27 @@ const useStore = create((set, get) => {
 
       const updatedPlaylists = [...get().playlists, newPlaylist];
       set({ playlists: updatedPlaylists });
-      localStorage.setItem('playlists', JSON.stringify(updatedPlaylists));
+      localStorage.setItem("playlists", JSON.stringify(updatedPlaylists));
 
       setTimeout(() => set({ shouldPreventPlay: false }), 0);
     },
 
-    // Функция для удаления плейлиста по его ID
     removePlaylist: (playlistId) => {
       set({ shouldPreventPlay: true });
 
       const updatedPlaylists = get().playlists.filter((playlist) => playlist.id !== playlistId);
       set({ playlists: updatedPlaylists });
-      localStorage.setItem('playlists', JSON.stringify(updatedPlaylists));
+      localStorage.setItem("playlists", JSON.stringify(updatedPlaylists));
 
       setTimeout(() => set({ shouldPreventPlay: false }), 0);
     },
+
     nextTrack: () => {
       const { currentTrack, myMusic } = get();
       if (!currentTrack) return;
 
       const currentIndex = myMusic.findIndex((track) => track.src === currentTrack.src);
-      const nextIndex = (currentIndex + 1) % myMusic.length; // зацикливаем на первый трек
+      const nextIndex = (currentIndex + 1) % myMusic.length;
       const nextTrack = myMusic[nextIndex];
 
       if (nextTrack) {
@@ -132,17 +135,14 @@ const useStore = create((set, get) => {
       if (!currentTrack) return;
 
       const currentIndex = myMusic.findIndex((track) => track.src === currentTrack.src);
-      const prevIndex = (currentIndex - 1 + myMusic.length) % myMusic.length; // зацикливаем на последний трек
+      const prevIndex = (currentIndex - 1 + myMusic.length) % myMusic.length; 
       const prevTrack = myMusic[prevIndex];
 
       if (prevTrack) {
         get().playTrack(prevTrack);
       }
     },
-
-    
   };
-  
 });
 
 export default useStore;

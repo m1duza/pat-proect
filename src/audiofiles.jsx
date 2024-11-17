@@ -12,7 +12,8 @@ const AudioFiles = () => {
     pauseTrack, 
     removeFromMyMusic, 
     addToMyMusic, 
-    shouldPreventPlay 
+    shouldPreventPlay ,
+    setPlaylist
   } = useStore();
   
   const [hoverIndex, setHoverIndex] = useState(null);
@@ -30,6 +31,7 @@ const AudioFiles = () => {
     } else {
       playTrack({ ...file, index });
     }
+    
   };
 
   const openModal = (e) => {
