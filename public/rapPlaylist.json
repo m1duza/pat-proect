@@ -1,5 +1,17 @@
 [
     {
+      "title": "SOYUZ TEST",
+      "author": "SALUKI",
+      "src": "/pat-proect/SALUKI - SOYUZ TEST [audiovk.com].mp3",
+      "cover": "/pat-proect/500x500-000000-80-0-03 (1).jpg"
+    },
+    {
+      "title": "BOLSHIE KURTKI",
+      "author": "SALUKI feat. FRIENDLY THUG 52 NGG",
+      "src": "/pat-proect/SALUKI feat. FRIENDLY THUG 52 NGG - BOLSHIE KURTKI [audiovk.com].mp3",
+      "cover": "/pat-proect/500x500-000000-80-0-03 (1).jpg"
+    },
+    {
       "title": "Биг Сити Лайф",
       "author": "Whole Lotta Swag",
       "src": "/pat-proect/audio/Whole Lotta Swag - Биг Сити Лайф [audiovk.com].mp3",
@@ -28,15 +40,27 @@
       "title": "Страгл",
       "author": "Whole Lotta Swag",
       "src": "/pat-proect/audio/Whole Lotta Swag - Страгл [audiovk.com].mp3",
-      "cover": "/pat-proect/cover/500x500-000000-80-0-02.jpg"
+      "cover": "/pat-proect/500x500-000000-80-0-02.jpg"
     },
 
     {
       "title": "Попробуй",
       "author": "Whole Lotta Swag",
-      "src": "/pat-proect/public/audio/Whole Lotta Swag - Попробуй [audiovk.com].mp3",
-      "cover": "/pat-proect/cover/500x500-000000-80-0-02.jpg"
+      "src": "/pat-proect/Whole Lotta Swag - Попробуй [audiovk.com].mp3",
+      "cover": "/pat-proect/500x500-000000-80-0-02.jpg"
+    },
+    {
+      "title": "Whistle Song",
+      "author": "Kizaru",
+      "src": "/pat-proect/kizaru - Whistle Song [audiovk.com].mp3",
+      "cover": "/pat-proect/500x500-000000-80-0-0.jpg"
+    },
+    {
+      "title": "Mazzaleen",
+      "author": "LIL KRYSTALLL",
+      "src": "/pat-proect/LIL KRYSTALLL - Mazzaleen [audiovk.com].mp3",
+      "cover": "/pat-proect/500x500-000000-80-0-0 (1).jpg"
     }
-
+   
 
   ]
