@@ -2,7 +2,7 @@
   {
     "title": "SOYUZ TEST",
     "author": "SALUKI",
-    "src": "pat-proect/audio/SALUKI - SOYUZ TEST [audiovk.com].mp3",
+    "src": "/pat-proect/audio/SALUKI - SOYUZ TEST [audiovk.com].mp3",
     "cover": "/pat-proect/500x500-000000-80-0-03 (1).jpg"
   },
   {
@@ -49,24 +49,13 @@
     "src": "/pat-proect/audio/Whole Lotta Swag - Попробуй [audiovk.com].mp3",
     "cover": "/pat-proect/500x500-000000-80-0-02.jpg"
   },
-  {
-    "title": "Whistle Song",
-    "author": "Kizaru",
-    "src": "/pat-proect/audio/kizaru - Whistle Song [audiovk.com].mp3",
-    "cover": "/pat-proect/500x500-000000-80-0-0.jpg"
-  },
+ 
   {
     "title": "Mazzaleen",
     "author": "LIL KRYSTALLL",
     "src": "/pat-proect/audio/LIL KRYSTALLL - Mazzaleen [audiovk.com].mp3",
     "cover": "/pat-proect/500x500-000000-80-0-0 (1).jpg"
-  },
-  {
-    "title": "Keys to the City",
-    "author": "Big Baby Tape",
-    "src": "/pat-proect/audio/Big Baby Tape - Keys to the City [audiovk.com].mp3",
-    "cover": "/pat-proect/https___images.genius.com_53f7a40a3af45dab63878be8642e1cc5.1000x1000x1.png"
   }
- 
+
 
 ]
