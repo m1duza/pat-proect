@@ -89,7 +89,7 @@ const Controll = () => {
               type="range"
               min="0"
               max="1"
-              step="0.01"
+              step="0.001"
               value={volume}
               onChange={handleVolumeChange}
               className="volume_slider"
