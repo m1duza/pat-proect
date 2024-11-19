@@ -1,4 +1,9 @@
-[
+{
+  "id": 2,
+  "name": "rock",
+  "description": "rock",
+  "cover": "/pat-proect/rockcover2 1.png",
+  "tracks": [
     {
       "title": "Nine",
       "author": "Liily",
@@ -17,6 +22,6 @@
       "src": "/pat-proect/audio/Liily - Toro [audiovk.com].mp3",
       "cover": "icfaitt.jpg"
     }
-   
   ]
+}
   

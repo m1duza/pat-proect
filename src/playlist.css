@@ -1,11 +1,22 @@
 .main_block_play_list{
-    height: 765px;
+    height: 754px;
     width: 800px;
     background-color: hsl(0, 0%, 13%);
     border-radius: 20px;
     display: flex;
     flex-direction: column;
 
+}
+@media (max-width: 1440px) {
+  .main_block_play_list{
+    height: 754px;
+    width: 800px;
+    background-color: hsl(0, 0%, 13%);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+margin-right: 20px ;
+}
 }
 .playlist_wrapper{
     width: 160px;

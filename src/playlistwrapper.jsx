@@ -18,6 +18,8 @@ export default function Playlistwrapper() {
     setPlaylist,
     addToMyMusic,
     removeFromMyMusic,
+    setContext,
+    currentTrackIndex
     
   } = useStore();
   const [togglePlayList, setTogglePlayList] = useState(false);
@@ -40,21 +42,19 @@ export default function Playlistwrapper() {
   }, []);
 
   const handleTrackClick = (file, index) => {
-    if (currentTrack?.index === index) {
-      isPlaying ? pauseTrack() : playTrack({ ...file, index });
+    setContext(playlistData.tracks); // Устанавливаем контекст плейлиста
+
+    if (currentTrack?.src === file.src) {
+      isPlaying ? pauseTrack() : playTrack(file, index);
     } else {
-      playTrack({ ...file, index });
+      playTrack(file, index);
     }
-    // Пример использования для установки активного плейлиста
-
-
   };
-
+  
+ 
+  const isActiveTrack = (index) => currentTrackIndex === index;
   const isTrackInMyMusic = (track) => myMusic.some((t) => t.src === track.src);
-  const handleOpenPlaylist2 = () => {
-    // Передаем данные при навигации
-    navigate("/playlist2", { state: { playlistData } });
-  };
+
 return(
         <div className="main_playlist_block">
             <div
@@ -95,13 +95,11 @@ return(
                   
                   </div>
                   <div className="bottom_audio_files_block">
-                        {playlistData.map((file, index) => (
+                        {playlistData.tracks.map((file, index) => (
                         <div key={index} className="track">
                             <button
-                            style={{
-                                backgroundColor: hoverIndex === index || (currentTrack?.index === index)
-                                ? '#333333'
-                                : '#222222'
+                             style={{
+                              backgroundColor: isActiveTrack(index) || hoverIndex === index ? '#333333' : '#222222', // Используем isActiveTrack для проверки текущего трека
                             }}
                             className="play_button2"
                             onClick={() => handleTrackClick(file, index)}
@@ -110,10 +108,11 @@ return(
                             >
                             <div className="main_left_side_block">
                             <img className="cover__img" src={file.cover} alt={file.title}
-                                style={{
-                                filter: hoverIndex === index || (currentTrack?.index === index) ? 'brightness(50%)' : 'brightness(100%)'
-                                }}
+                              style={{
+                                filter: isActiveTrack(index) ? 'brightness(50%)' : 'brightness(100%)' // Меняем фильтр в зависимости от активного состояния
+                              }}
                             />
+                      
                             {hoverIndex === index && (!isPlaying || currentTrack?.index !== index) && (
                                 <div className='cicle'>
                                 <img className='icon__play' src="icons8-воспроизведение-24.png" alt="Play" />
